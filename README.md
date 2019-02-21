@@ -1,6 +1,4 @@
-![icon](http://p7f8yck57.bkt.clouddn.com/2018-08-28-022737.png)
-
-# GOPL
+<img src="https://images.yinzige.com/2019-02-21-Go-Logo_LightBlue.png" width=200px/>
 
 ```shell
 gopl
