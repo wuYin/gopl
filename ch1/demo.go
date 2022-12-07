@@ -41,8 +41,10 @@ func main() {
 
 	wg.Wait()                                       // 把 mu.Lock() 和 mu.Unlock() 注释掉  // go run server2.go
 	resp, _ := cli.Get("http://0.0.0.0:2333/count") // 循环请求 1000 次
-	counts, _ := ioutil.ReadAll(resp.Body)          // 计数只有 140 次
-	fmt.Printf("counts: %s", counts)                // count 未加锁的情况下，更新共享变量是极为不安全的
+	if (err == nil) {
+	  counts, _ := ioutil.ReadAll(resp.Body) // 计数只有 140 次
+	  fmt.Printf("counts: %s", counts) // counts 未加锁的情况下，更新共享变量极为不安全的    }  
+    	}
 }
 
 func demo1(m map[int]int) {
